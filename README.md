@@ -1,6 +1,6 @@
 # Novel Tracker
 
-**Student:** Beso Meskhia
+**Student:** Besik Meskhia
 **Course:** Web Application Development (Laravel MVC), Kutaisi International University, midterm project
 
 Novel Tracker is a small Laravel app for keeping track of the web novels you read. Each novel has
