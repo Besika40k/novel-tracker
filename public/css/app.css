@@ -1,0 +1,293 @@
+/* Novel Tracker: plain CSS, loaded by layouts/app.blade.php (no build step needed). */
+
+:root {
+    --bg: #0f172a;
+    --panel: #1e293b;
+    --border: #334155;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --danger: #f87171;
+    --gold: #fbbf24;
+    --green: #4ade80;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: var(--accent);
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+}
+
+h1 {
+    margin: 0 0 16px;
+    font-size: 1.6rem;
+}
+
+/* Header */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Buttons */
+
+.button {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    background: var(--accent);
+    color: var(--bg);
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button.secondary {
+    background: transparent;
+    color: var(--accent);
+}
+
+.button.danger {
+    border-color: var(--danger);
+    background: transparent;
+    color: var(--danger);
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+/* Flash message */
+
+.flash {
+    margin: 0 0 16px;
+    padding: 10px 14px;
+    border-left: 4px solid var(--green);
+    border-radius: 6px;
+    background: rgba(74, 222, 128, 0.12);
+}
+
+/* Search and filter */
+
+.search {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.search input {
+    flex: 1 1 240px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--panel);
+    color: var(--text);
+    font: inherit;
+}
+
+.search select {
+    width: auto;
+}
+
+.count {
+    color: var(--muted);
+}
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--panel);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.actions {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+}
+
+.actions form {
+    margin: 0;
+}
+
+.empty {
+    padding: 24px;
+    color: var(--muted);
+    text-align: center;
+}
+
+/* Badges */
+
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.favourite {
+    background: rgba(251, 191, 36, 0.15);
+    color: var(--gold);
+}
+
+.caught-up,
+.status-completed {
+    background: rgba(74, 222, 128, 0.15);
+    color: var(--green);
+}
+
+.status-reading {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent);
+}
+
+.status-planned {
+    background: rgba(148, 163, 184, 0.15);
+    color: var(--muted);
+}
+
+.status-dropped {
+    background: rgba(248, 113, 113, 0.15);
+    color: var(--danger);
+}
+
+/* Pagination (Laravel's pagination::bootstrap-4 markup) */
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-link {
+    display: block;
+    min-width: 36px;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.page-item.active .page-link {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--bg);
+}
+
+.page-item.disabled .page-link {
+    color: var(--muted);
+}
+
+/* Forms */
+
+.novel-form {
+    max-width: 640px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--panel);
+}
+
+.field {
+    flex: 1;
+    margin-bottom: 14px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--muted);
+}
+
+.field-row {
+    display: flex;
+    gap: 12px;
+}
+
+.field.checkbox label {
+    color: var(--text);
+}
+
+.error {
+    margin: 4px 0 0;
+    color: var(--danger);
+    font-size: 0.9rem;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+/* Small screens */
+
+@media (max-width: 720px) {
+    .field-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
