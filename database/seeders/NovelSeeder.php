@@ -1,0 +1,225 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Novel;
+use Illuminate\Database\Seeder;
+
+class NovelSeeder extends Seeder
+{
+    /**
+     * Fill the novels table with real web novels.
+     *
+     * Every status appears several times so the filter has something to show,
+     * and three novels share the author "Er Gen" so a search visibly narrows the list.
+     */
+    public function run(): void
+    {
+        $novels = [
+            [
+                'title' => 'Lord of the Mysteries',
+                'author' => 'Cuttlefish That Loves Diving',
+                'origin' => 'chinese',
+                'status' => 'completed',
+                'chapters_read' => 1432,
+                'total_chapters' => 1432,
+                'rating' => 9.6,
+                'is_favourite' => true,
+            ],
+            [
+                'title' => 'Circle of Inevitability',
+                'author' => 'Cuttlefish That Loves Diving',
+                'origin' => 'chinese',
+                'status' => 'reading',
+                'chapters_read' => 520,
+                'total_chapters' => 1180,
+                'rating' => 9.0,
+                'is_favourite' => false,
+            ],
+            [
+                'title' => 'Reverend Insanity',
+                'author' => 'Gu Zhen Ren',
+                'origin' => 'chinese',
+                'status' => 'dropped',
+                'chapters_read' => 600,
+                'total_chapters' => 2334,
+                'rating' => 8.8,
+                'is_favourite' => false,
+            ],
+            [
+                'title' => 'I Shall Seal the Heavens',
+                'author' => 'Er Gen',
+                'origin' => 'chinese',
+                'status' => 'completed',
+                'chapters_read' => 1614,
+                'total_chapters' => 1614,
+                'rating' => 8.7,
+                'is_favourite' => false,
+            ],
+            [
+                'title' => 'A Will Eternal',
+                'author' => 'Er Gen',
+                'origin' => 'chinese',
+                'status' => 'planned',
+                'chapters_read' => 0,
+                'total_chapters' => 1314,
+                'rating' => 8.4,
+                'is_favourite' => false,
+            ],
+            [
+                'title' => 'Renegade Immortal',
+                'author' => 'Er Gen',
+                'origin' => 'chinese',
+                'status' => 'dropped',
+                'chapters_read' => 300,
+                'total_chapters' => 2088,
+                'rating' => 7.9,
+                'is_favourite' => false,
+            ],
+            [
+                'title' => 'Coiling Dragon',
+                'author' => 'I Eat Tomatoes',
+                'origin' => 'chinese',
+                'status' => 'completed',
+                'chapters_read' => 806,
+                'total_chapters' => 806,
+                'rating' => 8.1,
+                'is_favourite' => false,
+            ],
+            [
+                'title' => "Omniscient Reader's Viewpoint",
+                'author' => 'Sing Shong',
+                'origin' => 'korean',
+                'status' => 'completed',
+                'chapters_read' => 551,
+                'total_chapters' => 551,
+                'rating' => 9.5,
+                'is_favourite' => true,
+            ],
+            [
+                'title' => 'Solo Leveling',
+                'author' => 'Chugong',
+                'origin' => 'korean',
+                'status' => 'completed',
+                'chapters_read' => 270,
+                'total_chapters' => 270,
+                'rating' => 8.6,
+                'is_favourite' => false,
+            ],
+            [
+                'title' => "The Novel's Extra",
+                'author' => 'Jee Gab Song',
+                'origin' => 'korean',
+                'status' => 'reading',
+                'chapters_read' => 280,
+                'total_chapters' => 408,
+                'rating' => 8.3,
+                'is_favourite' => false,
+            ],
+            [
+                'title' => "Trash of the Count's Family",
+                'author' => 'Yu Ryeo Han',
+                'origin' => 'korean',
+                'status' => 'planned',
+                'chapters_read' => 0,
+                'total_chapters' => 1100,
+                'rating' => 8.5,
+                'is_favourite' => false,
+            ],
+            [
+                'title' => 'Overgeared',
+                'author' => 'Park Saenal',
+                'origin' => 'korean',
+                'status' => 'dropped',
+                'chapters_read' => 900,
+                'total_chapters' => 2000,
+                'rating' => 7.5,
+                'is_favourite' => false,
+            ],
+            [
+                'title' => 'Mushoku Tensei: Jobless Reincarnation',
+                'author' => 'Rifujin na Magonote',
+                'origin' => 'japanese',
+                'status' => 'completed',
+                'chapters_read' => 286,
+                'total_chapters' => 286,
+                'rating' => 9.1,
+                'is_favourite' => true,
+            ],
+            [
+                'title' => 'Re:Zero - Starting Life in Another World',
+                'author' => 'Tappei Nagatsuki',
+                'origin' => 'japanese',
+                'status' => 'reading',
+                'chapters_read' => 450,
+                'total_chapters' => 700,
+                'rating' => 8.7,
+                'is_favourite' => false,
+            ],
+            [
+                'title' => 'Ascendance of a Bookworm',
+                'author' => 'Miya Kazuki',
+                'origin' => 'japanese',
+                'status' => 'completed',
+                'chapters_read' => 677,
+                'total_chapters' => 677,
+                'rating' => 8.9,
+                'is_favourite' => false,
+            ],
+            [
+                'title' => 'Overlord',
+                'author' => 'Kugane Maruyama',
+                'origin' => 'japanese',
+                'status' => 'planned',
+                'chapters_read' => 0,
+                'total_chapters' => 120,
+                'rating' => 8.2,
+                'is_favourite' => false,
+            ],
+            [
+                'title' => 'Shadow Slave',
+                'author' => 'Guiltythree',
+                'origin' => 'english',
+                'status' => 'reading',
+                'chapters_read' => 2105,
+                'total_chapters' => 2480,
+                'rating' => 9.2,
+                'is_favourite' => true,
+            ],
+            [
+                'title' => 'The Beginning After the End',
+                'author' => 'TurtleMe',
+                'origin' => 'english',
+                'status' => 'reading',
+                'chapters_read' => 400,
+                'total_chapters' => 480,
+                'rating' => 8.2,
+                'is_favourite' => false,
+            ],
+            [
+                'title' => 'Mother of Learning',
+                'author' => 'nobody103',
+                'origin' => 'english',
+                'status' => 'completed',
+                'chapters_read' => 108,
+                'total_chapters' => 108,
+                'rating' => 9.3,
+                'is_favourite' => true,
+            ],
+            [
+                'title' => 'The Wandering Inn',
+                'author' => 'pirateaba',
+                'origin' => 'english',
+                'status' => 'dropped',
+                'chapters_read' => 120,
+                'total_chapters' => 1600,
+                'rating' => 7.8,
+                'is_favourite' => false,
+            ],
+        ];
+
+        foreach ($novels as $novel) {
+            Novel::create($novel);
+        }
+    }
+}
